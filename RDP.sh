@@ -3,7 +3,7 @@ printf "Installing RDP Be Patience... " >&2
 {
 sudo useradd -m MEDEL
 sudo adduser MEDEL sudo
-echo 'ALOK:8426' | sudo chpasswd
+echo '123456' | sudo chpasswd
 sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
 sudo apt-get update
 wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
@@ -17,8 +17,8 @@ sudo systemctl disable lightdm.service
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg --install google-chrome-stable_current_amd64.deb
 sudo apt install --assume-yes --fix-broken
-sudo apt install nautilus nano -y 
-sudo adduser ALOK chrome-remote-desktop
+sudo apt install nautilus nano -y
+sudo adduser MEDEL chrome-remote-desktop
 } &> /dev/null &&
 printf "\nSetup Complete " >&2 ||
 printf "\nError Occured " >&2
